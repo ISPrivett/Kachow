@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const searchBar = document.getElementById('searchBar');
+    const searchBar = document.getElementById('search-bar');
     const body = document.body;
     let image = null;
     let sound = new Audio('https://files.voicy.network/public/Content/Clips/Sound/00a4b495-076b-4f4c-8bfa-95b8735bd4cd.mp4');

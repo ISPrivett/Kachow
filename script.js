@@ -18,10 +18,17 @@ document.addEventListener('DOMContentLoaded', () => {
             const endHeight = getRandomInt(50, window.innerHeight - 150);
             
             // Initial position
+            image.id = 'unique-dynamic-image';
             image.style.left = '-50%';
-            image.style.top = `${startHeight}px`;
+            image.style.top = '50px';
             image.style.transition = 'left 2s, top 2s';
-            image.style.transform = 'scale(0.3)';
+            image.style.backgroundColor = 'transparent'; // Ensure no background
+            image.style.border = 'none'; // Remove borders
+            image.style.display = 'block';
+            image.style.maxWidth = 'none'; // Prevents scaling issues
+            image.style.maxHeight = 'none'; // Prevents scaling issues
+            image.style.width = 'auto'; // Explicit width
+            image.style.height = '150px'; // Explicit height
             body.appendChild(image);
 
             requestAnimationFrame(() => {

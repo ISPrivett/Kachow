@@ -18,7 +18,7 @@
         
         // Image dimensions
         const imageHeight = 150; // Explicit height of the image
-        const imageWidth = 150;  // Explicit width of the image
+        const imageWidth = 200;  // Explicit width of the image
         
         // Viewport and margin calculations
         const viewportHeight = window.innerHeight;
@@ -32,8 +32,8 @@
         // Initial position and styling
         image.id = `unique-dynamic-image-${Date.now()}`;
         image.style.zIndex = '9999'; // Ensure image is on top
-        image.style.left = `-${imageWidth}px`; // Start off the screen to the left
-        image.style.top = `${startHeight}px`; // Set the random starting height
+        image.style.left = `-${imageWidth*2}px`; // Start off the screen to the left
+        image.style.top = `${startHeight*2}px`; // Set the random starting height
         image.style.transition = 'left 2s, top 2s'; // Transition for movement
         image.style.backgroundColor = 'transparent'; // Ensure no background
         image.style.border = 'none'; // Remove borders

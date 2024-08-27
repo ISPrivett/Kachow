@@ -64,7 +64,7 @@
                 const query = input.value.toLowerCase();
                 console.log(`Current Query: ${query}`);
                 
-                if (query.includes('lightning')) {
+                if (query==='lightning') {
                     addImage();
                 } else {
                     removeImage();

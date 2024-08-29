@@ -10,31 +10,54 @@
             background-color: rgb(50, 50, 50);
             color: rgb(193, 216, 96);
             font-family: Roboto, sans-serif;
-
         }
-        input[type="text"], input[type="url"] {
+        input[type="search"], input[type="url"] {
             width: 100%;
             margin-bottom: 10px;
+            background-color: rgb(33, 37, 41);
+            border-bottom-color: rgb(73, 80, 87);
+            border-radius: 6px;
+            border-width: 1px;
+            color: rgb(167, 173, 177);
+            border-style: solid;
         }
         button {
+            margin-top: 10px;
             width: 100%;
             padding: 5px;
-            background-color: rgba(108, 117, 125, 0.404);
+            background-color:rgb(50, 50, 50);
             border-color: rgb(108, 117, 125);
             color: rgb(167, 173, 177);
+            border-style: solid;
+            border-width: 1px;
         }
     </style>
 </head>
 <body>
     <h3>Settings</h3>
     <label for="soundUrl">Sound URL:</label>
-    <input type="url" id="soundUrl" placeholder="Enter sound URL" />
+    <input type="search" id="soundUrl" placeholder="Enter sound URL" list="soundlist"/>
 
     <label for="imageUrl">Image URL:</label>
-    <input type="url" id="imageUrl" placeholder="Enter image URL" />
+    <input type="search" id="imageUrl" placeholder="Enter image URL" list="imglist"/>
 
     <label for="query">Query String:</label>
-    <input type="text" id="query" placeholder="Enter query" />
+    <input type="search" id="query" placeholder="Enter query" list="qlist"/>
+
+    <datalist id="soundlist">
+        <option value="https://files.voicy.network/public/Content/Clips/Sound/00a4b495-076b-4f4c-8bfa-95b8735bd4cd.mp4">
+        <option value="https://www.soundjay.com/button/beep-08b.wav">
+    </datalist>
+
+    <datalist id="imglist">
+        <option value="https://tinyurl.com/ys44mrax">
+        <option value="https://www.iconarchive.com/download/i107501/paomedia/small-n-flat/24/gnome.ico">
+    </datalist>
+
+    <datalist id="qlist">
+        <option value="Lightning">
+        <option value="Gnome">
+    </datalist>
 
     <button id="saveButton">Save</button>
 

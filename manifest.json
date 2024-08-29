@@ -1,20 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "Dynamic Image Extension",
+  "name": "Changeable Content Script",
   "version": "1.0",
-  "description": "Shows a dynamic image based on user-defined URL and query",
-  "permissions": [
-    "storage",
-    "activeTab"
-  ],
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
   "background": {
     "service_worker": "background.js"
-  },
-  "action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-
-    }
   },
   "content_scripts": [
     {

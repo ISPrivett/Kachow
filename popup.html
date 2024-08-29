@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Settings</title>
-  <style>
-    body { font-family: Arial, sans-serif; width: 300px; }
-    label { display: block; margin: 10px 0 5px; }
-    input { width: 100%; padding: 5px; }
-    button { margin-top: 10px; }
-  </style>
+    <title>Settings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+            width: 200px;
+            background-color: rgb(50, 50, 50);
+            color: rgb(193, 216, 96);
+            font-family: Roboto, sans-serif;
+
+        }
+        input[type="text"], input[type="url"] {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 5px;
+            background-color: rgba(108, 117, 125, 0.404);
+            border-color: rgb(108, 117, 125);
+            color: rgb(167, 173, 177);
+        }
+    </style>
 </head>
 <body>
-  <h1>Extension Settings</h1>
-  <label for="imageUrl">Image URL:</label>
-  <input id="imageUrl" type="text">
-  
-  <label for="soundUrl">Sound URL:</label>
-  <input id="soundUrl" type="text">
+    <h3>Settings</h3>
+    <label for="soundUrl">Sound URL:</label>
+    <input type="url" id="soundUrl" placeholder="Enter sound URL" />
 
-  <label for="query">Query:</label>
-  <input id="query" type="text">
+    <label for="imageUrl">Image URL:</label>
+    <input type="url" id="imageUrl" placeholder="Enter image URL" />
 
-  <button id="save">Save</button>
+    <label for="query">Query String:</label>
+    <input type="text" id="query" placeholder="Enter query" />
 
-  <script src="popup.js"></script>
+    <button id="saveButton">Save</button>
+
+    <script src="popup.js"></script>
 </body>
 </html>
